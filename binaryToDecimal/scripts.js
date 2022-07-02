@@ -73,6 +73,7 @@ function decimalToBases(num,base) {
     var i = 0;
     var resultado = '';
 
+    //i=1  || dividendo=1 || base=2 ||  || resto=0 || resultado=0101 = 1010
 
     //tem que chamar a função hexaToDecimal... onde? como garantir que não vai quebrar as outras conversões.?
     while (i == 0) {
@@ -87,13 +88,12 @@ function decimalToBases(num,base) {
             i++; 
             resultado = resultado + dividendo;
         } 
-    
-        
     }
     return inverterNum(resultado);
 
 }
-//0101
+//num=0101
+// result=1010  || arr=0,1,0,1 || i=-1
 function inverterNum(num){
     var result='';
     var arr=num.split('');
@@ -138,3 +138,4 @@ function decimalToHexa(numero){
     }
     return numero;
 }
+
